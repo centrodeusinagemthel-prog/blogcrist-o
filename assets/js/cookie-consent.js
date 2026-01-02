@@ -1,25 +1,40 @@
+(() => {
+  const KEY = "cookie_consent_v1"; // accepted | rejected
 
-(function () {
-  const KEY = 'cookie_consent';
+  function bar(){ return document.getElementById("cookie-consent"); }
 
-  function setConsent(value) {
-    localStorage.setItem(KEY, value);
+  function hide(){
+    const el = bar();
+    if (el) el.style.display = "none";
+  }
+
+  function show(){
+    const el = bar();
+    if (el) el.style.display = "block";
+  }
+
+  function set(value){
+    try { localStorage.setItem(KEY, value); } catch(e) {}
     hide();
   }
 
-  function hide() {
-    const bar = document.getElementById('cookie-consent');
-    if (bar) bar.style.display = 'none';
+  function init(){
+    try {
+      const v = localStorage.getItem(KEY);
+      if (v === "accepted" || v === "rejected") return;
+    } catch(e) {}
+
+    show();
+
+    const el = bar();
+    if (!el) return;
+
+    const accept = el.querySelector("[data-cookie-accept]");
+    const reject = el.querySelector("[data-cookie-reject]");
+
+    if (accept) accept.addEventListener("click", () => set("accepted"));
+    if (reject) reject.addEventListener("click", () => set("rejected"));
   }
 
-  function init() {
-    if (localStorage.getItem(KEY)) return;
-    const bar = document.getElementById('cookie-consent');
-    if (bar) bar.style.display = 'block';
-  }
-
-  window.acceptCookies = function () { setConsent('accepted'); };
-  window.rejectCookies = function () { setConsent('rejected'); };
-
-  document.addEventListener('DOMContentLoaded', init);
+  document.addEventListener("DOMContentLoaded", init);
 })();

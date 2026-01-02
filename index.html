@@ -11,21 +11,8 @@
   <meta property="og:image" content="assets/img/cover-hero.svg">
   <link rel="stylesheet" href="assets/css/style.css">
   <!-- AdSense: cole aqui quando aprovado -->
+  <link rel="stylesheet" href="assets/css/cookie-consent.css">
 </head>
-  <!-- COOKIE CONSENT -->
-<div id="cookie-consent">
-  <div class="wrap">
-    <p>
-      Utilizamos cookies para melhorar sua experiência. 
-      Leia nossa <a href="cookies.html">Política de Cookies</a>.
-    </p>
-    <div class="actions">
-      <button class="reject" onclick="rejectCookies()">Rejeitar</button>
-      <button class="accept" onclick="acceptCookies()">Aceitar</button>
-    </div>
-  </div>
-</div>
-
 <body>
 <header class="topbar">
   <div class="container topbar-inner">
@@ -154,6 +141,21 @@
     </div>
 
 </footer>
+
+  <script src="assets/js/cookie-consent.js"></script>
+<!-- Cookie Consent -->
+<div id="cookie-consent" class="cookie-consent" role="dialog" aria-live="polite" aria-label="Preferências de cookies">
+  <div class="cookie-consent__wrap">
+    <p class="cookie-consent__text">
+      Utilizamos cookies para melhorar sua experiência. Você pode aceitar ou rejeitar.
+      Leia nossa <a href="cookies.html">Política de Cookies</a>.
+    </p>
+    <div class="cookie-consent__actions">
+      <button type="button" class="btn cookie-consent__btn cookie-consent__btn--reject" data-cookie-reject>Rejeitar</button>
+      <button type="button" class="btn primary cookie-consent__btn cookie-consent__btn--accept" data-cookie-accept>Aceitar</button>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
