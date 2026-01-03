@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
-<rect width="1600" height="900" fill="#f6f7fb"/>
-<rect x="120" y="120" width="1360" height="660" rx="40" fill="#ffffff" stroke="#e6e9fb"/>
-<path d="M220 640 C420 420, 560 420, 760 640 S1100 860, 1380 600" fill="none" stroke="#2a4cff" stroke-width="18" opacity="0.22"/>
-<text x="180" y="280" font-family="system-ui,Segoe UI,Roboto,Arial" font-size="64" fill="#0d1433">José no Egito</text>
-<text x="180" y="360" font-family="system-ui,Segoe UI,Roboto,Arial" font-size="34" fill="#4e5a86">Capa ilustrativa (troque por imagem real)</text>
-</svg>
